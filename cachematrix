@@ -1,6 +1,10 @@
 
 ## Get the inverse matrix of matrix x
-## Seems like a good job
+
+
+##This function "makeCacheMatrix" generate four functions for
+##matrix x and then use the second function to get the inverse
+##of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   A <- NULL
@@ -17,11 +21,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Ought to be a good job
+## This function "cacheSolve" is supposed to use the getinverse
+## function set above to calculate the inverse matrix of matrix x
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   A <- x$getinverse()
+  ## output the message if A is not null 
   if(!is.null(A)) {
     message("getting cached data")
     return(A)
